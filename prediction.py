@@ -49,7 +49,7 @@ def predict(data=data):
         forest = pickle.load(open("forest.pickle", "rb"))
         pred = forest.predict(x)
 
-    st.success(pred)
+    st.success('%.7f' % pred)
 
 if st.button("Predict closing price"):
     predict()
