@@ -30,7 +30,7 @@ model = st.radio("Select the model to use:",
                     ("Linear", "Decision Tree", "Random Forest"))
 
 def predict(data=data):
-    df = pd.DataFrame(data)
+    df = pd.DataFrame(data, index=[0])
     imputer = pickle.load(open("impupter.pickle", "rb"))
     scaler = pickle.load(open("scaler.pickle", "rb"))
     x = df[features]
