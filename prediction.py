@@ -20,10 +20,10 @@ for i in range(len(features)):
 
 if st.button("Randomize"):
     for i in range(len(features)):
-        st.session_state[features[i]] = random.randint(minmax[features[i][0], minmax[features[i][1])
+        st.session_state[features[i]] = random.randint(minmax[features[i]][0], minmax[features[i]][1])
 
 for i in range(len(features)):
-    data[features[i]] = placeholders[i].number_input(features[i], min_value=minmax[features[i][0], max_value=minmax[features[i][1], key=features[i])
+    data[features[i]] = placeholders[i].number_input(features[i], min_value=minmax[features[i]][0], max_value=minmax[features[i]][1], key=features[i])
 
 st.write("Model")
 model = st.radio("Select the model to use:",
